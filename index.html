@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+    <nav class="container navbar navbar-expand-xxl bg-dark navbar-dark rounded-4 fs-1">
+        <div class="container">
+            <span class="navbar-text">Income Tax Details for the FY 2024-2025</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <form id="myForm" onsubmit="return validateForm()" autocomplete="off"
+                action="https://script.google.com/macros/s/AKfycbzgReCsr7z0xG8cFIhAs3iTqvnH_gAKY6uG2BlLxfNx4KsoU9ZIga4pWdLPkjoW_drC/exec"
+                method="POST">
+                <div class="card text-bg-light">
+                    <div class="card-header">
+                        Employee Details
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="EmployeeName">Employee Name:</label>
+                                    <input type="text" class="form-control" id="EmployeeName" name="EmployeeName"
+                                        placeholder="Enter Employee Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="EmployeeDOB">Employee Date of Birth:</label>
+                                    <input type="date" class="form-control" id="EmployeeDOB" name="EmployeeDOB"
+                                        placeholder="Enter Date of Birth" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="EmployeePan">Employee PAN:</label>
+                                    <input type="text" class="form-control" id="EmployeePan" name="EmployeePan"
+                                        placeholder="Enter Employee PAN" maxlength="10" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="EmpAddress">Employee Address:</label>
+                                    <input type="text" class="form-control" id="EmpAddress" name="EmpAddress"
+                                        placeholder="Enter Employee Address" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light">
+                    <div class="card-header">
+                        Rent Details
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="RentPaid">Rent Paid:</label>
+                            <input type="number" class="form-control" id="RentPaid" name="RentPaid"
+                                placeholder="Enter Rent Paid Monthly" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="LandlordName">Landlord Name:</label>
+                            <input type="text" class="form-control" id="LandlordName" name="LandlordName"
+                                placeholder="Enter Landlord Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="LandlordPan">Landlord PAN:</label>
+                            <input type="text" class="form-control" id="LandlordPan" name="LandlordPan"
+                                placeholder="Enter Landlord PAN" maxlength="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light">
+                    <div class="card-header">
+                        Investment 80C Section Deduction
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="PPF">Investment in PPF:</label>
+                                    <input type="number" class="form-control" id="PPF" name="PPF"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="EPF">Employee’s share of PF contribution:</label>
+                                    <input type="number" class="form-control" id="EPF" name="EPF"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="LifeInsurance">Life Insurance Premium payment:</label>
+                                    <input type="number" class="form-control" id="LifeInsurance" name="LifeInsurance"
+                                        placeholder="Enter amount 80C Section Deduction" required>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="TuitionFee">Children’s Tuition Fee:</label>
+                                    <input type="number" class="form-control" id="TuitionFee" name="TuitionFee"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="SukanyaSamridhi">Investment in Sukanya Samridhi Account:</label>
+                                    <input type="number" class="form-control" id="SukanyaSamridhi"
+                                        name="SukanyaSamridhi" placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ELSS">ELSS:</label>
+                                    <input type="number" class="form-control" id="ELSS" name="ELSS"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="FiveYrDeposit">Five year deposit scheme:</label>
+                                    <input type="number" class="form-control" id="FiveYrDeposit" name="FiveYrDeposit"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ULIPS">ULIPS:</label>
+                                    <input type="number" class="form-control" id="ULIPS" name="ULIPS"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="NSC">NSCs:</label>
+                                    <input type="number" class="form-control" id="NSC" name="NSC"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light">
+                    <div class="card-header">
+                        Home Loan Interest
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="LoanRepay">Principal Repayment of home loan:</label>
+                                    <input type="number" class="form-control" id="LoanRepay" name="LoanRepay"
+                                        placeholder="Enter amount 80C Section Deduction">
+                                </div>
+                                <div class="form-group">
+                                    <label for="HLInterest">Home Loan Interest</label>
+                                    <input type="number" class="form-control" id="HLInterest" name="HLInterest"
+                                        placeholder="Enter amount Home Loan Interest">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="HLLenderName">Home Loans Lender Name:</label>
+                                    <input type="text" class="form-control" id="HLLenderName" name="HLLenderName"
+                                        placeholder="Enter Home Loans Lender Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="HLLenderPAN">Home Loans Lender PAN:</label>
+                                    <input type="text" class="form-control" id="HLLenderPAN" name="HLLenderPAN"
+                                        placeholder="Enter Home Loans Lender PAN" maxlength="10">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light">
+                    <!-- Add other fields similarly -->
+                    <div class="card-header">
+                        Medical Deductions
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="MedicalSelf">Medical Insurance Self, spouse, children</label>
+                            <input type="number" class="form-control" id="MedicalSelf" name="MedicalSelf"
+                                placeholder="Enter amount 80D Section Deduction Medical">
+                        </div>
+                    </div>
+                </div>
+                <div class="card text-bg-light">
+                    <div class="card-header">
+                        <label for="message">Message:</label>
+                        <textarea autocapitalize="words" type="text" id="message" name="Message" maxlength="100"
+                            placeholder="Message Max Length 100 Char"></textarea>
+                    </div>
+                    <div class="container text-center">
+                        <br>
+                        <input class="submitButton" type="submit" value="Submit" />
+                    </div>
+                </div>
+        </div>
+        <!-- Include your medical deduction fields here -->
+        </form>
+
+    </div>
+    </div>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

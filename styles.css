@@ -1,0 +1,165 @@
+/* Custom styles for the form */
+/* form {
+    max-width: 400px;
+    margin: 0 auto;
+} */
+/* 
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+} */
+
+/* GOOGLE CSS IMPORT START */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+/* h1 {
+    color: red;
+    font-size: 6vh;
+} */
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    /* background-image: url(./man-wondering.jpg); */
+}
+
+form {
+    width: 75%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #ff000043;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+.submitButton {
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgba(99, 93, 93, 0.837) !important;
+    font-size: larger;
+    color: #fff;
+    transition: background-color 0.4s; /* Smooth color transition */
+    padding: 10px 10px; /* Padding around the text */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor style */
+}
+
+* Hover effect */
+.submitButton:hover {
+    background-color: #45a049; /* Darker green background */
+}
+
+/* Focus effect */
+.submitButton:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a blue shadow when focused */
+}
+
+/* CSS for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
+
+    form {
+        width: 98%;
+        background-position: left;
+    }
+
+    h1 {
+        font-size: 4vh;
+    }
+
+
+}
+
+textarea {
+    width: auto;
+    min-width: 100%; /* Ensures the textarea expands to fill its container */
+    resize: vertical; /* Allow vertical resizing */
+}
